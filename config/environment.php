@@ -4,6 +4,8 @@ require(P3\PATH.'/'.'initializer.php');
 
 P3\Initializer::run(function($config) {
 	$config->trap_extraneous_output = false;
+
+    date_default_timezone_set('UTC');
 });
 
 /* Dont edit past this line */
