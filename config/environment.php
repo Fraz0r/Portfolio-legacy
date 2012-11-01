@@ -5,6 +5,8 @@ require(P3\PATH.'/'.'initializer.php');
 P3\Initializer::run(function($config) {
 	$config->trap_extraneous_output = false;
 
+    $config->logging->log_level = P3\System\Logging\Engine::LEVEL_DEBUG; // this needs to go into skeleton, but per env
+
     date_default_timezone_set('UTC');
 });
 
