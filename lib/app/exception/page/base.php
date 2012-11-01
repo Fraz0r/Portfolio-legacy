@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exception;
+namespace App\Exception\Page;
 
 /**
  * User: tim.frazier [at] gmail.com
