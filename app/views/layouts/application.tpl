@@ -1,54 +1,39 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html lang=en-us class="no-js ie6"><![endif]--> 
-<!--[if IE 7 ]><html lang=en-us class="no-js ie7"><![endif]--> 
-<!--[if IE 8 ]><html lang=en-us class="no-js ie8"><![endif]--> 
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en-us" class="no-js"> <!--<![endif]-->
-	<head>
-	</head>
-	<body style="background: #555; font-size: 14px; margin: 0; padding: 0;">
-		<div style="padding: 3px; text-align: center; position: fixed; top: 0; left: 0; width: 100%; background: #000; color: #fff;">
-			<?= P3\Version::string(); ?>
-		</div>
-		<div id="lol" style="-webkit-transition: margin-top 500ms ease-in; border-radius: 15px; width: 600px; margin: -400px auto 0; background: #efefef; padding: 1em 1em 2em; border: 1px solid #111; box-shadow: 10px 10px 15px rgba(0,0,0,0.5);">
-			<h1 style="color: red">Edit this layout in: /app/layouts/application.tpl</h1>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
 
-			<p><strong>You can also override this layout, or disable it entirely - Global, or by controller [and/or] action</strong></p>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-			<h2>Action Output: </h2>
-			<div style="margin-left: 2em; background: #ddd; border: 1px solid #333; border-radius: 5px; margin-top: 2em; padding: .5em 1em;">
-				<?= $this->yield() ?>
-			</div>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
 
-			<h2>Sample Buffer (Checkout the action view file): </h2>
+<!-- Add your site or application content here -->
+<?= $this->yield(); ?>
 
-			<div style="margin-left: 2em; background: #ddd; border: 1px solid #333; border-radius: 5px; margin-top: 2em; padding: .5em 1em;">
-				<?= $this->yield('sample') ?>
-			</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+<script src="/js/plugins.js"></script>
+<script src="/js/main.js"></script>
 
-			<h2>A "partial":  These can be rendered by any template (layout, action_view, or another partial)</h2>
-
-			<div style="margin-left: 2em; background: #ddd; border: 1px solid #333; border-radius: 5px; margin-top: 2em; padding: .5em 1em;">
-				<?= $this->render(['partial' => 'shared/test', ['locals' => ['foo' => 'bar']]]); ?>
-			</div>
-
-			<h2>A "partial" with a collection!  (picture a record collection ;] )</h2>
-
-			<div style="margin-left: 2em; background: #ddd; border: 1px solid #333; border-radius: 5px; margin-top: 2em; padding: .5em 1em;">
-				<?php 
-					$collection = [
-						(object)(['name' => 'Tim']),
-						(object)(['name' => 'Eric']),
-					];
-				?>
-				<?= $this->render(['partial' => 'shared/person', ['collection' => $collection]]); ?>
-			</div>
-		</div>
-		<script type="text/javascript">
-			// <!-- <![CDATA[  Yea.. I got bored
-			document.getElementById('lol').style.marginTop = '40px';
-			// ]]> -->
-		</script>
-
-	</body>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
 </html>
