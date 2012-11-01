@@ -92,13 +92,53 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {background: #f2f2ff;}
 
+#page {width: 960px; margin: 3em auto 5em;}
+#page .wrap { border: 1px solid #aaa; color: #333; border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px; -o-border-radius: 8px; background: #fff; box-shadow: 5px 24px 14px -18px rgba(0, 0, 0, 0.3);}
+#page > header {text-align: center;}
+#page > header h1,
+#page > header h2 {}
+#page > header h1 {}
+#page > header h2 {}
 
+#page > .wrap > footer {background: #222; color: #f3f3f3; border-radius: 0 0 8px 8px; -webkit-border-radius: 0 0 8px 8px; -moz-border-radius: 0 0 8px 8px; -o-border-radius: 0 0 8px 8px; text-align: right; padding: 0 .7em;}
+#page > .wrap > footer address {font-size: 12px; line-height: 2.35em; }
 
+#main-nav {}
+#main-nav ul {background: #888; float: right; padding: 0; margin: 0 1em -1px; border: 1px solid #555; border-bottom: none; overflow: hidden; border-radius: 4px 4px 0 0;}
+#main-nav ul li {float: left; padding: 0 2px; border-top: 1px solid #ddd;}
+#main-nav ul li a {display: block; padding: .35em .7em .3em; color: #f3f3f3; text-decoration: none; text-shadow: 0 1px 1px rgba(0,0,0,0.8); border-style: solid; border-color: transparent; border-width: 0 1px;}
 
+#page .wrap {clear: both;}
+#page #body {padding: 1px;}
 
+#page #body > article {width: 92%; margin: 0 auto 2em;}
+#page #body > article > p  {margin-left: 1em;}
 
+#page #body > article ul {margin-left: 2em;}
 
+#page #body > article > nav {}
+#page #body > article > nav ul {}
+#page #body > article > nav ul li {list-style: disc; color: #000;}
+#page #body > article > nav ul li a {}
+
+#pages.home #main-nav .portfolio a,
+#pages.case-studies #main-nav .case-studies a,
+#pages.about-me #main-nav .about-me a		{background: #fff; color: #222; text-shadow: none; box-shadow: inset 0 4px 8px 1px rgba(0,0,0,0.1); border-color: transparent #444 transparent #222;}
+
+#pages.about-me li {position: relative;}
+#pages.about-me li .faded {position: absolute; left: 105px;}
+
+#case-studies .case-studies {margin-top: 3em;}
+#case-studies .case-studies article {margin-bottom: 3em;}
+#case-studies .case-studies article header {border-bottom: 1px solid #ddd; position: relative; }
+#case-studies .case-studies article header h1 {font-size: 18px; margin-bottom: .2em;}
+#case-studies .case-studies article header a {position: absolute; right: 0; bottom: .35em}
+#case-studies .case-studies article p {margin-left: 1em;}
+#case-studies .case-studies article dl {margin-left: 3em;}
+#case-studies .case-studies article dl dt {font-weight: bold;}
+#case-studies .case-studies article dl dd {padding-bottom: 1em;}
 
 
 
@@ -112,6 +152,7 @@ textarea {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+#body .faded {color: #777;}
 
 /*
  * Image replacement
@@ -221,7 +262,7 @@ textarea {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
+only screen and (min-resolution: 144dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -295,4 +336,7 @@ textarea {
     h3 {
         page-break-after: avoid;
     }
+
+    #page .wrap { border: none; }
+    #main-nav {display: none; }
 }
