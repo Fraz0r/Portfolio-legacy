@@ -8,7 +8,11 @@ class PagesController extends ApplicationController
 {
     public function show()
     {
-        var_dump($_GET);
-        die;
+        $this->page = $_GET['page'];
+
+        if(!$this->template_exists($this->page))
+            throw new \App\Exception\Page\NotFound($this->page);
+
+        $this->render_template($this->page);
     }
 }
